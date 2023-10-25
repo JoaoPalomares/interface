@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <div class="mae">
+        <div class="cadastro">
+            <h1>Cadastro de Pessoas</h1>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Nome">
+                <label for="floatingInput">Nome</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingPassword" placeholder="CPF" oninput="mascara(this)">
+                <label for="floatingPassword">CPF</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingPassword" placeholder="Endereço">
+                <label for="floatingPassword">Endereço</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="floatingPassword" placeholder="Altura">
+                <label for="floatingPassword">Altura</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="floatingPassword" placeholder="Peso">
+                <label for="floatingPassword">Peso</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="date" class="form-control" id="floatingPassword" placeholder="Data de Nascimento">
+                <label for="floatingPassword">Data de Nascimento</label>
+            </div>
+            <div class="form-floating mb-4">
+                <input type="text" class="form-control" id="floatingPassword" placeholder="Telefone" maxlength="15" oninput="mascaraTel(event)">
+                <label for="floatingPassword">Telefone</label>
+            </div>
+            <div class="botao">
+                <button type="button" class="btn btn-primary btn-lg">Cadastre-se</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
