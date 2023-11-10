@@ -1,51 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
-:root{
+:root {
     --cor01: #059B9A;
     --cor02: #0C0636;
     --cor03: #095169;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
 }
 
-.mae{
+.mae {
     background-color: var(--cor01);
-    width: 100vw;
-    height: 100vh;
+    height: 120vh;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     display: flex;
 }
 
-.cadastro{
+.cadastro {
     background-color: var(--cor02);
     width: 500px;
     height: 650px;
     border-radius: 40px;
 }
 
-.form-floating{
+.form-floating {
     margin: 2% auto;
     width: 400px;
 }
 
-h1{
+h1 {
     color: white;
     text-align: center;
 }
 
-.btn{
-    background-color: var(--cor03)!important;
+.btn {
+    background-color: var(--cor03) !important;
     border: none;
     width: 400px;
 }
 
-.botao{
+.botao {
     flex-direction: row;
     justify-content: center;
     align-items: center;
     display: flex;
+}
+
+.navbar-brand{
+    color: white!important;
+}
+
+.nav-link{
+    color: white!important;
+}
+
+.nav-link:hover{
+    text-decoration: underline;
+    animation-duration: 2s;
+    animation: normal;
+}
+
+.navbar{
+    background-color: var(--cor02)!important;
+}
+
+.collapse{
+    justify-content: right;
 }

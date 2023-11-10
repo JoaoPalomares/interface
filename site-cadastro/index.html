@@ -15,42 +15,71 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../site-cadastro/css/style.css">
     <script src="../site-cadastro/js/index.js"></script>
+    <script src="../site-cadastro/js/requests.js"></script>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Cadastro</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Cadastrar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Alterar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Pesquisar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Deletar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="mae">
         <div class="cadastro">
             <h1>Cadastro de Pessoas</h1>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="Nome">
+                <input type="text" class="form-control" id="floatingInput" name="nome-pessoa" placeholder="Nome">
                 <label for="floatingInput">Nome</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingPassword" placeholder="CPF" oninput="mascara(this)">
+                <input type="text" class="form-control" id="floatingPassword" name="cpf" placeholder="CPF"
+                    oninput="mascara(this)">
                 <label for="floatingPassword">CPF</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingPassword" placeholder="Endereço">
+                <input type="text" class="form-control" id="floatingPassword" name="endereco" placeholder="Endereço">
                 <label for="floatingPassword">Endereço</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="number" class="form-control" id="floatingPassword" placeholder="Altura">
+                <input type="number" class="form-control" id="floatingPassword" name="altura" placeholder="Altura">
                 <label for="floatingPassword">Altura</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="number" class="form-control" id="floatingPassword" placeholder="Peso">
+                <input type="number" class="form-control" id="floatingPassword" name="peso" placeholder="Peso">
                 <label for="floatingPassword">Peso</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="date" class="form-control" id="floatingPassword" placeholder="Data de Nascimento">
+                <input type="date" class="form-control" id="floatingPassword" name="data-de-nascimento"
+                    placeholder="Data de Nascimento">
                 <label for="floatingPassword">Data de Nascimento</label>
             </div>
             <div class="form-floating mb-4">
-                <input type="text" class="form-control" id="floatingPassword" placeholder="Telefone" maxlength="15" oninput="mascaraTel(event)">
+                <input type="text" class="form-control" id="floatingPassword" placeholder="Telefone" name="telefone"
+                    maxlength="15" oninput="mascaraTel(event)">
                 <label for="floatingPassword">Telefone</label>
             </div>
             <div class="botao">
-                <button type="button" class="btn btn-primary btn-lg">Cadastre-se</button>
+                <button type="button" class="btn btn-primary btn-lg" onclick="cadastrar()">Cadastre-se</button>
             </div>
         </div>
     </div>
