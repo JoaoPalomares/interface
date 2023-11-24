@@ -8,15 +8,15 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: var(--cor01);
 }
 
 .mae {
-    background-color: var(--cor01);
-    height: 120vh;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     display: flex;
+    margin: 2% 0 2% 0;
 }
 
 .cadastro {
@@ -59,14 +59,17 @@ h1 {
 
 .nav-link:hover{
     text-decoration: underline;
-    animation-duration: 2s;
-    animation: normal;
 }
 
 .navbar{
     background-color: var(--cor02)!important;
+    height: 70px;
 }
 
 .collapse{
     justify-content: right;
+}
+
+.navbar-toggler{
+    background-color: var(--cor03);
 }

@@ -38,3 +38,49 @@ function cadastrar() {
             // Trate os erros, se necessário
         });
 }
+
+function listarPessoas() {
+    fetch(`${url_server}/pessoas`)
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(pessoa => {
+                console.log(pessoa);
+            })
+        });
+
+    // exibir informações na tabela
+    data.forEach(pessoa => {
+        // Criando os elementos HTML
+        const tabela = document.querySelector('table');
+        const elementTr = document.createElement('tr');
+        const tdNome = document.createElement('td');
+        const tdCpf = document.createElement('td');
+        const tdDataNascimento = document.createElement('td');
+        const tdTelefone = document.createElement('td');
+        const tdPeso = document.createElement('td');
+        const tdAltura = document.createAttribute('td');
+        const tdEndereco = document.createAttribute('td');
+
+
+        // Inserindo os dados da pessoa no elemento	
+        tdNome.textContent = pessoa.nome;
+        tdCpf.textContent = pessoa.cpf;
+        tdDataNascimento.textContent = pessoa.data_nascimento;
+        tdTelefone.textContent = pessoa.telefone;
+        tdPeso.textContent = pessoa.peso;
+        tdAltura.textContent = pessoa.altura;
+        tdEndereco.textContent = pessoa.endereco;
+
+        // Inserindo os elementos nas linhas da tabela (tr => TableRow)
+        elementTr.appendChild(tdNome);
+        elementTr.appendChild(tdCpf);
+        elementTr.appendChild(tdDataNascimento);
+        elementTr.appendChild(tdTelefone);
+        elementTr.appendChild(tdPeso);
+        elementTr.appendChild(tdAltura);
+        elementTr.appendChild(tdEndereco);
+
+        // Adicionando a linha com as informações na tabela
+        tabela.appendChild(elementTr);
+    })
+}
